@@ -307,19 +307,6 @@ Widget SlideBarMenu(BuildContext context) {
   return Drawer(
     child: ListView(
       children: [
-        // UserAccountsDrawerHeader(
-        //   arrowColor: Color(0xffC60302),
-        //   accountName: Text('Roshan'),
-        //   accountEmail: Text('roshan@gmail.com'),
-        //   currentAccountPicture: Container(
-        //     decoration: BoxDecoration(
-        //       borderRadius: BorderRadius.circular(15),
-        //       image: DecorationImage(
-        //         image: AssetImage('assets/account.png'),
-        //       )
-        //     ),
-        //   )
-        // )
         Container(
           height: 130,
           color: Color(0xffC60302),
