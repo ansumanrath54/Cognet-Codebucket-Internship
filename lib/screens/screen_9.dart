@@ -1,3 +1,7 @@
+import 'package:day_1/screens/screen_1.dart';
+import 'package:day_1/screens/screen_10.dart';
+import 'package:day_1/screens/screen_11.dart';
+import 'package:day_1/screens/screen_12.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,7 +26,7 @@ class _Screen9State extends State<Screen9> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70),
         child: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.grey[100],
           leading: FlatButton(
             onPressed: () {
               Navigator.pop(context);
@@ -64,7 +68,7 @@ class _Screen9State extends State<Screen9> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 5),
-                      Text('Beauty Parlour Name', style: GoogleFonts.poppins(fontSize: 16),),
+                      Text('Beauty Parlour Name', style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w600),),
                       SizedBox(height: 10),
                       Text('Feature About This Business', style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey),),
                       SizedBox(height: 15),
@@ -226,7 +230,9 @@ class _Screen9State extends State<Screen9> {
                 ],
               ),
             ) : Container(),
-            selectedIndex == 1 ? Container(child: Text('ageh'),) : Container(),
+            selectedIndex == 1 ? Screen10() : Container(),
+            selectedIndex == 2 ? Screen11() : Container(),
+            selectedIndex == 3 ? Screen12() : Container(),
           ],
         ),
       ),
