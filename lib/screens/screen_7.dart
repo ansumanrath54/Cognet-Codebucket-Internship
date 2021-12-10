@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Screen7 extends StatelessWidget {
+class Screen7 extends StatefulWidget {
   const Screen7({Key? key}) : super(key: key);
+
+  @override
+  State<Screen7> createState() => _Screen7State();
+}
+
+class _Screen7State extends State<Screen7> {
+
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -119,6 +127,38 @@ class Screen7 extends StatelessWidget {
             )
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: index,
+        selectedItemColor: Color(0xffC60302),
+        unselectedItemColor: Colors.grey,
+        onTap: (int index) { setState((){ this.index = index;}); },
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/home (-1.png', color: Color(0xffC60302),),
+            title: Text("Home"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-user-tick-1.png'),
+            title: Text("Business Network"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-messages-1.png'),
+            title: Text("Chats"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/Group 17540.png'),
+            title: Text("Search Product"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-task.png'),
+            title: Text("My Posting"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-user.png'),
+            title: Text("Profile"),
+          ),
+        ],
       ),
     );
   }

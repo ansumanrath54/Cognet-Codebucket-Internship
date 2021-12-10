@@ -5,6 +5,7 @@ import 'package:day_1/screens/screen_4.dart';
 import 'package:day_1/screens/screen_5.dart';
 import 'package:day_1/screens/screen_6.dart';
 import 'package:day_1/screens/screen_7.dart';
+import 'package:day_1/screens/screen_8.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Screen7(),
+      home: Screen8(),
     );
   }
 }
