@@ -19,6 +19,8 @@ class _Screen8State extends State<Screen8> {
     'assets/getty_-5@2x.png'
   ];
 
+  int index = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -184,6 +186,38 @@ class _Screen8State extends State<Screen8> {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: index,
+        selectedItemColor: Color(0xffC60302),
+        unselectedItemColor: Colors.grey,
+        onTap: (int index) { setState((){ this.index = index;}); },
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/home (-1.png'),
+            title: Text("Home"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-user-tick-1.png'),
+            title: Text("Business Network"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-messages-1.png'),
+            title: Text("Chats"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/Group 17540.png', color: Color(0xffC60302),),
+            title: Text("Search Product"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-task.png'),
+            title: Text("My Posting"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-user.png'),
+            title: Text("Profile"),
+          ),
+        ],
       ),
     );
   }
