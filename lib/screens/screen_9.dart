@@ -17,6 +17,7 @@ class _Screen9State extends State<Screen9> {
 
   List categories = ['Overview', 'Reviews', 'Services Offered', 'Photos', 'Category'];
   int selectedIndex = 0;
+  int index = 0;
   double? wid;
 
   @override
@@ -235,6 +236,38 @@ class _Screen9State extends State<Screen9> {
             selectedIndex == 3 ? Screen12() : Container(),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: index,
+        selectedItemColor: Color(0xffC60302),
+        unselectedItemColor: Colors.grey,
+        onTap: (int index) { setState((){ this.index = index;}); },
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/home (-1.png'),
+            title: Text("Home"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-user-tick-1.png'),
+            title: Text("Business Network"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-messages-1.png'),
+            title: Text("Chats"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/Group 17540.png', color: Color(0xffC60302),),
+            title: Text("Search Product"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-task.png'),
+            title: Text("My Posting"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-user.png'),
+            title: Text("Profile"),
+          ),
+        ],
       ),
     );
   }
