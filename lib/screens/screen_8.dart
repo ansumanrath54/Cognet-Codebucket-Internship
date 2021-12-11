@@ -39,7 +39,7 @@ class _Screen8State extends State<Screen8> {
             children: [
               SizedBox(height: 5,),
               Text('Search Product or Service',
-                style: GoogleFonts.poppins(fontSize: 16, color: Colors.black),),
+                style: GoogleFonts.poppins(fontSize: 16, color: Colors.black, fontWeight: FontWeight.w600),),
             ],
           ),
           actions: [

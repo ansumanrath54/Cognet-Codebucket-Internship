@@ -90,7 +90,7 @@ class _Screen7State extends State<Screen7> {
                     border: InputBorder.none,
                     labelText: '        Search Product or Service',
                     labelStyle: TextStyle(
-                        fontSize: 15, fontWeight: FontWeight.bold),
+                        fontSize: 15, fontWeight: FontWeight.w600),
                     suffixIcon: Padding(
                       padding: EdgeInsets.all(5.0),
                       child: Container(
