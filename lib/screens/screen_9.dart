@@ -2,6 +2,7 @@ import 'package:day_1/screens/screen_1.dart';
 import 'package:day_1/screens/screen_10.dart';
 import 'package:day_1/screens/screen_11.dart';
 import 'package:day_1/screens/screen_12.dart';
+import 'package:day_1/screens/screen_13.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -104,9 +105,12 @@ class _Screen9State extends State<Screen9> {
                         children: [
                           Text('${categories[index]}', style: GoogleFonts.poppins(),),
                           Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xffC60302)
+                            ),
                             height: 4,
                             width: selectedIndex == index ? (wid!*7.8) : 0,
-                            color: Color(0xffC60302),
                           )
                         ],
                       ),
@@ -234,6 +238,7 @@ class _Screen9State extends State<Screen9> {
             selectedIndex == 1 ? Screen10() : Container(),
             selectedIndex == 2 ? Screen11() : Container(),
             selectedIndex == 3 ? Screen12() : Container(),
+            selectedIndex == 4 ? Screen13() : Container(),
           ],
         ),
       ),
