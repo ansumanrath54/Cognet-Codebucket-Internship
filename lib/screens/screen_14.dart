@@ -31,7 +31,7 @@ class _Screen14State extends State<Screen14> {
             child: Image.asset('assets/Group 16979.png'),
           ),
           title: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            //crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 5,),
               Center(
@@ -56,7 +56,7 @@ class _Screen14State extends State<Screen14> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           SizedBox(
-            height: 140,
+            height: 130,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: categories.length,
@@ -71,7 +71,6 @@ class _Screen14State extends State<Screen14> {
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 40),
                     child: Column(
-                      //mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('${categories[index]}', style: GoogleFonts.poppins(fontSize: 17, fontWeight: FontWeight.w600),),
                         SizedBox(height: 20),
@@ -91,9 +90,9 @@ class _Screen14State extends State<Screen14> {
             ),
           ),
           selectedIndex == 0 ? Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Container(
-              height: 500,
+            padding: const EdgeInsets.all(10),
+            child: SizedBox(
+              height: 480,
               child: ListView.builder(
                 physics: ScrollPhysics(),
                 shrinkWrap: true,
@@ -102,9 +101,19 @@ class _Screen14State extends State<Screen14> {
                   return Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Container(
+                      //height: 200,
+                      margin: EdgeInsets.only(bottom: 30),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        //color: Colors.grey
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
