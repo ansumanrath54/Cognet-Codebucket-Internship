@@ -174,14 +174,6 @@ class Screen19 extends StatelessWidget {
                         border: Border.all(color: Colors.grey),
                         borderRadius: BorderRadius.circular(25),
                           color: Colors.white,
-                          // boxShadow: [
-                          //   BoxShadow(
-                          //     color: Colors.grey.withOpacity(0.5),
-                          //     spreadRadius: 2,
-                          //     blurRadius: 3,
-                          //     offset: Offset(0, 3),
-                          //   ),
-                          // ]
                       ),
                       child: Row(
                         children: [
@@ -205,20 +197,6 @@ class Screen19 extends StatelessWidget {
           ],
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       title: null,
-      //       label: '',
-      //       icon: Image.asset('assets/Icon material-keyboard-voice.png', color: Colors.black,)
-      //     ),
-      //     BottomNavigationBarItem(
-      //       title: null,
-      //         label: '',
-      //         icon: Image.asset('assets/attachment-1.png', color: Colors.black, scale: 0.8,)
-      //     ),
-      //   ],
-      // ),
     );
   }
 }
