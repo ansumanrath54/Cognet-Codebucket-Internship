@@ -1,3 +1,4 @@
+import 'package:day_1/screens/screen_18.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,6 +11,7 @@ class Screen17 extends StatefulWidget {
 
 class _Screen17State extends State<Screen17> {
 
+  int index = 2;
   int selectedIndex = 0;
   List names = ['John Cena', 'Mr.Sam', 'Asad', 'Johan josh', 'Thomas Cooper'];
   List chats = [
@@ -119,7 +121,7 @@ class _Screen17State extends State<Screen17> {
             ),
             SizedBox(height: 20),
             selectedIndex == 0 ?
-            SizedBox(
+            Container(
               height: MediaQuery.of(context).size.height,
               child: ListView.builder(
                 physics: ScrollPhysics(),
@@ -157,9 +159,47 @@ class _Screen17State extends State<Screen17> {
                   );
                 },
               ),
-            ) : Container()
+            ) : Container(),
+            selectedIndex == 1 ?
+                Screen18() :
+                Container()
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: index,
+        selectedItemColor: Color(0xffC60302),
+        unselectedItemColor: Colors.grey,
+        onTap: (int index) {
+          setState((){
+            this.index = index;
+          });},
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/home (-1.png', color: index == 0 ? Color(0xffC60302) : null),
+            title: Text("Home"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-user-tick-1.png', color: index == 1 ? Color(0xffC60302) : null),
+            title: Text("Business Network"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-messages-1.png', color: index == 2 ? Color(0xffC60302) : null),
+            title: Text("Chats"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/Group 17540.png', color: index == 3 ? Color(0xffC60302) : null),
+            title: Text("Search Product"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-task.png', color: index == 4 ? Color(0xffC60302) : null),
+            title: Text("My Posting"),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/bottom/vuesax-outline-user.png', color: index == 5 ? Color(0xffC60302) : null),
+            title: Text("Profile"),
+          ),
+        ],
       ),
     );
   }
