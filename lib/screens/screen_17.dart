@@ -36,20 +36,25 @@ class _Screen17State extends State<Screen17> {
             },
             child: Image.asset('assets/Group 16979.png'),
           ),
-          title: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 5,),
-              Center(
-                child: Text('Submit for Lead',
-                  style: GoogleFonts.poppins(fontSize: 16, color: Colors.black, fontWeight: FontWeight.w600),),
-              ),
-            ],
-          ),
           flexibleSpace: SafeArea(
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
+                SizedBox(width: 40),
+                Container(
+                  padding: EdgeInsets.fromLTRB(15, 7, 15, 7),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10)
+                  ),
+                  child: Row(
+                    children: [
+                      Text('Search Groups Or People', style: GoogleFonts.poppins(color: Colors.grey, fontSize: 15),),
+                      SizedBox(width: 15),
+                      Image.asset('assets/search-normal-19.png')
+                    ],
+                  ),
+                ),
                 Column(
                   children: [
                     IconButton(
