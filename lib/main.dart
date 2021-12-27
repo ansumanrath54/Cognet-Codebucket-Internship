@@ -2,6 +2,7 @@ import 'package:day_1/screens/screen_1.dart';
 import 'package:day_1/screens/screen_14.dart';
 import 'package:day_1/screens/screen_15.dart';
 import 'package:day_1/screens/screen_16.dart';
+import 'package:day_1/screens/screen_17.dart';
 import 'package:day_1/screens/screen_2.dart';
 import 'package:day_1/screens/screen_3.dart';
 import 'package:day_1/screens/screen_4.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Screen16(),
+      home: Screen17(),
     );
   }
 }
